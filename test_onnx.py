@@ -37,8 +37,8 @@ def letterbox(im, new_shape=(640, 640), color=(114, 114, 114), auto=True, scaleu
     return im, r, (dw, dh)
 
 
-w = r"C:\Users\ben93\PycharmProjects\yolov7\DL23\DL239\weights\best.onnx"
-base_dir = r"C:\Users\ben93\Downloads\CombinedDatasetsChallenge\CombinedDatasetsChallenge\images\val"
+w = r"best_v1.onnx"
+base_dir = r"data/CombinedDatasetsChallenge/images/val"
 
 img_list = sorted(os.listdir(base_dir))
 print(img_list)
@@ -57,7 +57,7 @@ for img_path in img_list:
     names = ['boats','other']
     colors = {name:[random.randint(0, 255) for _ in range(3)] for i,name in enumerate(names)}
 
-    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     image = img.copy()
     image, ratio, dwdh = letterbox(image, auto=False)
@@ -102,11 +102,11 @@ for img_path in img_list:
         cv2.rectangle(image,box[:2],box[2:],color,2)
         cv2.putText(image,name,(box[0], box[1] - 2),cv2.FONT_HERSHEY_SIMPLEX,0.75,[225, 255, 255],thickness=2)
 
-    if outputs.shape[0]==0:
-        cv2.imshow("image ", ori_images[0])
-    else:
-        cv2.imshow("image ", image)
-    cv2.waitKey(0)
+    # if outputs.shape[0]==0:
+    #     cv2.imshow("image ", ori_images[0])
+    # else:
+    #     cv2.imshow("image ", image)
+    # cv2.waitKey(0)
 
 
 print(jdict)

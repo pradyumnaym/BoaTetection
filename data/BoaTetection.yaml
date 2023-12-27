@@ -1,5 +1,5 @@
-train: C:\Users\ben93\Downloads\CombinedDatasetsChallenge\CombinedDatasetsChallenge\images\train
-val: C:\Users\ben93\Downloads\CombinedDatasetsChallenge\CombinedDatasetsChallenge\images\val
-test: C:\Users\ben93\Downloads\CombinedDatasetsChallenge\CombinedDatasetsChallenge\images\val
+train: data/CombinedDatasetsChallenge/images/train
+val: data/CombinedDatasetsChallenge/images/val
+test: data/CombinedDatasetsChallenge/images/val
 nc: 2
 names: ['boat', 'other']
