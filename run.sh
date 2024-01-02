@@ -9,5 +9,5 @@
 #SBATCH --mail-type=ALL
 
 WANDB_MODE=disabled
-singularity exec --nv  /common/singularityImages/DL23.sif python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 16 --device 0,1,2,3 --sync-bn --batch-size 16 --data data/BoaTetection.yaml --img 1280 1280 --cfg cfg/training/yolov7-e6.yaml --weights 'yolov7-e6.pt' --name yolov7-e6 --hyp data/hyp.scratch.p6.yaml
+singularity exec --nv  /common/singularityImages/DL23.sif python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 16 --device 0,1,2,3 --sync-bn --batch-size 64 --data data/BoaTetection.yaml --img 640 640 --cfg cfg/training/yolov7x.yaml --weights 'yolov7x.pt' --name yolov7x_re --hyp data/hyp.scratch.p5.yaml
 echo DONE!

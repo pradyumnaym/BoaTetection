@@ -6,6 +6,7 @@ from copy import deepcopy
 sys.path.append('./')  # to run '$ python *.py' files in subdirectories
 logger = logging.getLogger(__name__)
 import torch
+import torchvision
 from models.common import *
 from models.experimental import *
 from utils.autoanchor import check_anchor_order
@@ -579,6 +580,7 @@ class Model(nn.Module):
         logger.info('')
 
     def forward(self, x, augment=False, profile=False):
+        #x = torchvision.transforms.functional.resize(x, (1280, 1280))
         if augment:
             img_size = x.shape[-2:]  # height, width
             s = [1, 0.83, 0.67]  # scales
