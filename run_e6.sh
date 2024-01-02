@@ -9,11 +9,12 @@
 #SBATCH --mail-type=ALL
 
 WANDB_MODE=disabled
-YOLO_MODEL=yolov7-e6e
+YOLO_MODEL=yolov7-e6
+DATA_YAML=data/BoaTetection_v2.yaml
 
 # if the model is not downloaded, download it
 # if [ ! -f "$YOLO_MODEL.pt" ]; then
 #     wget 
 
-singularity exec --nv  /common/singularityImages/DL23.sif python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 16 --device 0,1,2,3 --sync-bn --batch-size 32 --data data/BoaTetection.yaml --img 640 640 --cfg cfg/training/$YOLO_MODEL.yaml --weights "$YOLO_MODEL.pt" --name $YOLO_MODEL-640 --hyp data/hyp.scratch.p6.yaml
+singularity exec --nv  /common/singularityImages/DL23.sif python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 16 --device 0,1,2,3 --sync-bn --batch-size 48 --data $DATA_YAML --img 640 640 --cfg cfg/training/$YOLO_MODEL.yaml --weights "$YOLO_MODEL.pt" --name $YOLO_MODEL-640_v2 --hyp data/hyp.scratch.p6.yaml
 echo DONE!
