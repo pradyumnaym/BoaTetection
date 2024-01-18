@@ -8,5 +8,3 @@
 6. Run `cd data && bash combine_v15.sh`.
 7. Run `sbatch run_e6.sh` on the TCML cluster.
 
-### LangSAM
-
