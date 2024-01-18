@@ -10,7 +10,7 @@
 
 WANDB_MODE=disabled
 YOLO_MODEL=yolov7-e6
-DATA_YAML=data/BoaTetection_v22.yaml
+DATA_YAML=data/BoaTetection_v15.yaml
 EPOCHS=60
 
 # if the model is not downloaded, download it
