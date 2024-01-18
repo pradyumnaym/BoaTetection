@@ -1,6 +1,6 @@
 ## MaCVi BoaTetection Challenge
 
-This is the code we used for the MaCVi [BoaTetection challenge](https://macvi.org/leaderboard/surface/BoaTetection/BoaTetection?primaryMetric=AR_1) during the winter break (WiSe 2023/24) at University of Tübingen. You can find the details of our strategy in the [presentation](https://docs.google.com/presentation/d/1ACOg5uyMg0wR7PBCltHcXq-Y4ygBIBgNnwtscv88sbQ/edit?usp=sharing).
+This is the code we (Group 28) used for the MaCVi [BoaTetection challenge](https://macvi.org/leaderboard/surface/BoaTetection/BoaTetection?primaryMetric=AR_1) during the winter break (WiSe 2023/24) at University of Tübingen. You can find the details of our strategy in the [presentation](https://docs.google.com/presentation/d/1ACOg5uyMg0wR7PBCltHcXq-Y4ygBIBgNnwtscv88sbQ/edit?usp=sharing).
 
 
 
