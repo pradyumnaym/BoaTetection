@@ -1,3 +1,8 @@
+This is the code we used for the MaCVi [BoaTetection challenge](https://macvi.org/leaderboard/surface/BoaTetection/BoaTetection?primaryMetric=AR_1) during the winter break (WiSe 2023/24) at University of Tübingen. You can find the details of our strategy in the [presentation](https://docs.google.com/presentation/d/1ACOg5uyMg0wR7PBCltHcXq-Y4ygBIBgNnwtscv88sbQ/edit?usp=sharing).
+
+
+
+
 ### Combining datasets.
 
 1. Download the [Sibenik dataset](https://mega.nz/file/wAk3zbyK#YBz-njyY5v8QTs93aId5CtXDblPqkUmbO8xCAET_4fw) and unzip its contents into `data`. Rename the root folder of the unzipped file to `SibenikDataset`.
