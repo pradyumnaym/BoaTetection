@@ -60,7 +60,7 @@ for img_path in img_list:
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     image = img.copy()
-    image, ratio, dwdh = letterbox(image, auto=False)
+    image, ratio, dwdh = letterbox(image, auto=False, scaleup=False)
     image = image.transpose((2, 0, 1))
     image = np.expand_dims(image, 0)
     image = np.ascontiguousarray(image)
@@ -72,7 +72,6 @@ for img_path in img_list:
 
 
     inname = [i.name for i in session.get_inputs()]
-
 
     inp = {inname[0]:im}
 
